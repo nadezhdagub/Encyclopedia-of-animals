@@ -1,8 +1,0 @@
-spring:
-  profiles:
-    active: ${SPRING_PROFILES}
-
-logging:
-  level.ROOT: info
-  level.org.springframework.security: ${LOGGER_LEVEL:INFO}
-  level.com.sredasolutions.mobiliuz: ${LOGGER_LEVEL:INFO}
