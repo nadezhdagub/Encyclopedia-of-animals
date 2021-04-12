@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".registrationActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="414dp"
+        android:layout_height="132dp"
+        app:srcCompat="@android:color/holo_green_dark" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="415dp"
+            android:layout_height="738dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="-4dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginLeft="45sp"
+                android:layout_marginTop="45sp"
+                android:layout_marginRight="45sp"
+                android:text="Регистрация"
+                android:textAlignment="center"
+                android:textColor="#C21055"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/new_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45sp"
+                android:layout_marginTop="190sp"
+                android:layout_marginRight="45sp"
+                android:background="@color/colorPrimary"
+                android:ems="10"
+                android:hint="Login"
+                android:inputType="textPersonName"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/new_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45sp"
+                android:layout_marginTop="40sp"
+                android:layout_marginRight="45sp"
+                android:background="@color/colorPrimary"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/registNew_but"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="95sp"
+                android:layout_marginTop="40sp"
+                android:layout_marginRight="95sp"
+                android:text="Зарегестрировать"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>
