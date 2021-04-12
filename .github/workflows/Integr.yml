@@ -10,20 +10,6 @@ on:
     branches: [ main ]
 
 jobs:
-  app:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 1.8
-        uses: actions/setup-java@v1
-        with:
-          java-version: 1.8
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      - name: Run unit tests
-        run: ./gradlew testDebug --tests "com.example.kyrs.*"
         
   unit_test:
     runs-on: windows-latest
