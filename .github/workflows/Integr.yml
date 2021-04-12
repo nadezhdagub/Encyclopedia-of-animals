@@ -31,7 +31,15 @@ jobs:
         with:
           java-version: 1.8
         
+      - name: Run unit tests
+        run: ./gradlew testDebug --tests "com.example.kyrs.*"
 
+      - name: Archive test report
+        uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+          name: ReportUnitTest
+          path: app/build/reports/tests/testDebugUnitTest
 
       - name: Run integration tests
         run: ./gradlew testDebug --tests "com.example.kyrs.Integration.*"
