@@ -34,7 +34,7 @@ jobs:
 
 
       - name: Run integration tests
-        run: ./gradlew testDebug --tests "com.trkpo.ptinder.IT.*"
+        run: ./gradlew testDebug --tests "true	com.example.kyrs.Integration.*"
 
       - name: Archive test report
         if: ${{ always() }}
