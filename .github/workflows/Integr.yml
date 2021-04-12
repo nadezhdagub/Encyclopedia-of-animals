@@ -32,8 +32,6 @@ jobs:
           java-version: 1.8
         
 
-      - name: Start docker containers
-        run: docker/docker.sh
 
       - name: Run integration tests
         run: ./gradlew testDebug --tests "com.trkpo.ptinder.IT.*"
@@ -45,5 +43,4 @@ jobs:
           name: integration_test_report
           path: app/build/reports/tests/testDebugUnitTest
 
-      - name: Stop containers
-        run: docker stack rm app
+
