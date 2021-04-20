@@ -5,7 +5,7 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ main ]
+    branches: [ ivanovvo-Integration-1 ]
   pull_request:
     branches: [ ivanovvo-Integration-1 ]
 
@@ -31,9 +31,15 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+          
+      - name: Grant execute permission for scripts and gradle
+        run: chmod +x gradlew && chmod +x docker/docker.sh
         
       - name: Run unit tests
         run: ./gradlew testDebug --tests "com.example.kyrs.*"
+        
+      - name: Start docker containers
+        run: docker/docker.sh
 
       - name: Archive test report
         uses: actions/upload-artifact@v2
@@ -52,4 +58,5 @@ jobs:
           name: ReportIntegrTest
           path: app/build/reports/tests/testDebugUnitTest
 
-
+      - name: Stop containers
+        run: docker stack rm app
