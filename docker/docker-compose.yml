@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  ptinder:
+  encycl:
     # Pull image (by default from Docker Hub)
     image: vadim8699/encyclopedia:latest
     # Here you can set environment variables if you want
