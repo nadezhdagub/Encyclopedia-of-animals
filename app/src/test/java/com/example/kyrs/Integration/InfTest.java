@@ -22,11 +22,11 @@ public class InfTest {
 
         TestUrl testUrl = new TestUrl();
 
-        testUrl.setUrl("http://192.168.56.1:8080/animal/infb_type");
+        testUrl.setUrl("http://localhost:8080/animal/infb_type");
         ActivityScenario<Information> scenario =
                 ActivityScenario.launch(Information.class);
         scenario.onActivity(activity -> {
-            testUrl.setUrl("http://192.168.56.1:8080/animal/infb_type");
+            testUrl.setUrl("http://localhost:8080/animal/infb_type");
         });
 
         Assert.assertEquals("Род млекопитающих отряда хищных. Согласно палеонтологическим сведениям, " +
@@ -42,11 +42,11 @@ public class InfTest {
 
         TestUrl testUrl = new TestUrl();
 
-        testUrl.setUrl("http://192.168.56.1:8080/animal/infb_area");
+        testUrl.setUrl("http://localhost:8080/animal/infb_area");
         ActivityScenario<Information> scenario =
                 ActivityScenario.launch(Information.class);
         scenario.onActivity(activity -> {
-            testUrl.setUrl("http://192.168.56.1:8080/animal/infb_area");
+            testUrl.setUrl("http://localhost:8080/animal/infb_area");
         });
 
         Assert.assertEquals("Ареал проживания животного широк. Он включает в себя Арктику и Антарктику, " +
@@ -60,11 +60,11 @@ public class InfTest {
 
         TestUrl testUrl = new TestUrl();
 
-        testUrl.setUrl("http://192.168.56.1:8080/animal/infb_downsizing");
+        testUrl.setUrl("http://localhost:8080/animal/infb_downsizing");
         ActivityScenario<Information> scenario =
                 ActivityScenario.launch(Information.class);
         scenario.onActivity(activity -> {
-            testUrl.setUrl("http://192.168.56.1:8080/animal/infb_downsizing");
+            testUrl.setUrl("http://localhost:8080/animal/infb_downsizing");
         });
 
         Assert.assertEquals("Численность медведей уменьшается из за изменения климата, так же из за охоты на них браконьеров.", Information.result);
@@ -75,11 +75,11 @@ public class InfTest {
 
         TestUrl testUrl = new TestUrl();
 
-        testUrl.setUrl("http://192.168.56.1:8080/animal/infb_number");
+        testUrl.setUrl("http://localhost:8080/animal/infb_number");
         ActivityScenario<Information> scenario =
                 ActivityScenario.launch(Information.class);
         scenario.onActivity(activity -> {
-            testUrl.setUrl("http://192.168.56.1:8080/animal/infb_number");
+            testUrl.setUrl("http://localhost:8080/animal/infb_number");
         });
 
         Assert.assertEquals("Сейчас в мире около 200 000 бурых медведей. Из них большинство обитает в " +
@@ -91,11 +91,11 @@ public class InfTest {
 
         TestUrl testUrl = new TestUrl();
 
-        testUrl.setUrl("http://192.168.56.1:8080/animal/infb_security");
+        testUrl.setUrl("http://localhost:8080/animal/infb_security");
         ActivityScenario<Information> scenario =
                 ActivityScenario.launch(Information.class);
         scenario.onActivity(activity -> {
-            testUrl.setUrl("http://192.168.56.1:8080/animal/infb_security");
+            testUrl.setUrl("http://localhost:8080/animal/infb_security");
         });
 
         Assert.assertEquals("В ряде стран Западной Европы — Испании, Франции, Италии — медведи находятся под частичной " +
@@ -108,11 +108,11 @@ public class InfTest {
 
         TestUrl testUrl = new TestUrl();
 
-        testUrl.setUrl("http://192.168.56.1:8080/animal/infv_type");
+        testUrl.setUrl("http://localhost:8080/animal/infv_type");
         ActivityScenario<Information> scenario =
                 ActivityScenario.launch(Information.class);
         scenario.onActivity(activity -> {
-            testUrl.setUrl("http://192.168.56.1:8080/animal/infv_type");
+            testUrl.setUrl("http://localhost:8080/animal/infv_type");
         });
 
         Assert.assertEquals("Вид животного общее положение. вид хищных млекопитающих из семейства псовых. Кроме того, как " +
@@ -127,11 +127,11 @@ public class InfTest {
 
         TestUrl testUrl = new TestUrl();
 
-        testUrl.setUrl("http://192.168.56.1:8080/animal/infv_area");
+        testUrl.setUrl("http://localhost:8080/animal/infv_area");
         ActivityScenario<Information> scenario =
                 ActivityScenario.launch(Information.class);
         scenario.onActivity(activity -> {
-            testUrl.setUrl("http://192.168.56.1:8080/animal/infv_area");
+            testUrl.setUrl("http://localhost:8080/animal/infv_area");
         });
 
         Assert.assertEquals("Волк обитает в самых разных ландшафтах, но предпочитает степи, полупустыни, тундру, лесостепь, " +
@@ -145,11 +145,11 @@ public class InfTest {
 
         TestUrl testUrl = new TestUrl();
 
-        testUrl.setUrl("http://192.168.56.1:8080/animal/infv_downsizing");
+        testUrl.setUrl("http://localhost:8080/animal/infv_downsizing");
         ActivityScenario<Information> scenario =
                 ActivityScenario.launch(Information.class);
         scenario.onActivity(activity -> {
-            testUrl.setUrl("http://192.168.56.1:8080/animal/infv_downsizing");
+            testUrl.setUrl("http://localhost:8080/animal/infv_downsizing");
         });
 
         Assert.assertEquals("В настоящее время его ареал и общая численность животных заметно уменьшились, главным образом в результате " +
@@ -164,11 +164,11 @@ public class InfTest {
 
         TestUrl testUrl = new TestUrl();
 
-        testUrl.setUrl("http://192.168.56.1:8080/animal/infv_number");
+        testUrl.setUrl("http://localhost:8080/animal/infv_number");
         ActivityScenario<Information> scenario =
                 ActivityScenario.launch(Information.class);
         scenario.onActivity(activity -> {
-            testUrl.setUrl("http://192.168.56.1:8080/animal/infv_number");
+            testUrl.setUrl("http://localhost:8080/animal/infv_number");
         });
 
         Assert.assertEquals("Всего выделяют примерно 32 подвида волка, различающихся размерами и оттенками меха. На данный момент общая численность волков " +
@@ -180,11 +180,11 @@ public class InfTest {
 
         TestUrl testUrl = new TestUrl();
 
-        testUrl.setUrl("http://192.168.56.1:8080/animal/infv_security");
+        testUrl.setUrl("http://localhost:8080/animal/infv_security");
         ActivityScenario<Information> scenario =
                 ActivityScenario.launch(Information.class);
         scenario.onActivity(activity -> {
-            testUrl.setUrl("http://192.168.56.1:8080/animal/infv_security");
+            testUrl.setUrl("http://localhost:8080/animal/infv_security");
         });
 
         Assert.assertEquals("Международный союз охраны природы и природных ресурсов (МСОП) финансирует проект, целью которого является" +
