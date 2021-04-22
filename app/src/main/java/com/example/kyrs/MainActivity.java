@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     public static String resul = "noo";
 
     public static String testUrl;
-    public static  String SERVER_URL = "http://192.168.56.1:8080/user/login";
+    public static  String SERVER_URL = "http://localhost:8080/user/login";
 
     public void setUrl(String url) {
         testUrl = url;
