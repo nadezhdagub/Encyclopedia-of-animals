@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                             new ServTask().execute(SERVER_URL);
                         }
                         try {
-                            Thread.sleep(10000);
+                            Thread.sleep(2000);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
