@@ -29,6 +29,7 @@ public class AuthorizationTest {
                 activity.mainMenu.performClick();
                     });
             //String response = mainActivity.execute(UTILS_PATH).get();
+          System.out.println( mainActivity.resul);
             Assert.assertEquals("logged", mainActivity.resul);
 
 
@@ -47,6 +48,7 @@ public class AuthorizationTest {
             activity.mainMenu.performClick();
         });
         //String response = mainActivity.execute(UTILS_PATH).get();
+        System.out.println( mainActivity.resul);
         Assert.assertEquals("no", mainActivity.resul);
 
 
