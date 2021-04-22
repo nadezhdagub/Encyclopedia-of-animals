@@ -51,15 +51,20 @@ public class MainActivity extends AppCompatActivity {
             RequestBody body =
                     RequestBody.create(MediaType.parse("application/json"), "");
             System.out.println(urls[0]);
+             System.out.println("1");
             Request request = new Request.Builder()
                     .url(urls[0])
                     .addHeader("Authorization", Credentials.basic(log, passwrd))
                     .post(body)
                     .build();
+             System.out.println("2");
             try {
                 Response response = client.newCall(request).execute();
+                 System.out.println("3");
                 try {
+                     System.out.println("4");
                     resul = (Objects.requireNonNull(response.body()).string());
+                     System.out.println("5");
                     if (!resul.equalsIgnoreCase("logged")) {
                         resul = "no";
                     }
