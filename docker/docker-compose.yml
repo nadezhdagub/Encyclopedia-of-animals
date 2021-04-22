@@ -9,7 +9,7 @@ services:
     environment:
       - ENV_PASSWORD=admin
       - ENV_USER=admin
-      - ENV_HOST=jdbc:postgresql://localhost:5432/admin
+      - ENV_HOST=jdbc:postgresql://pghost:5432/admin
     # Expose port 8080. It means port 8080 on host -> port 8080 on container
     ports:
       - 8080:8080
