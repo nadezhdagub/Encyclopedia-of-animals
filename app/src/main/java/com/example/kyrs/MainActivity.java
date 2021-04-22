@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     resul = (Objects.requireNonNull(response.body()).string());
                      System.out.println("5");
                     if (!resul.equalsIgnoreCase("logged")) {
+                             System.out.println("6");
                         resul = "no";
                     }
                     System.out.println(resul+"           9999");
