@@ -7,4 +7,4 @@ sleep 50
 echo "Docker stack services"
 docker service ls
 echo "Docker stack processes"
-docker stack ps app
+docker stack ps app --no-trunc
