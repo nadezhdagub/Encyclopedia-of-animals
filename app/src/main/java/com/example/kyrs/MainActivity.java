@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... urls) {
+                System.out.println("0");
             String log = login.getText().toString();
             String passwrd = password.getText().toString();
             ///////////////////////////////
@@ -94,8 +95,9 @@ public class MainActivity extends AppCompatActivity {
                         AlertDialog.Builder a_builder = new AlertDialog.Builder(MainActivity.this);
 
                         if(!testUrl.equals("")) {
+                                System.out.println(testUrl + "   1");
                             new ServTask().execute(testUrl);
-                        }else{
+                        }else{    System.out.println(SERVER_URL + "    1");
                             new ServTask().execute(SERVER_URL);
                         }
                         try {
