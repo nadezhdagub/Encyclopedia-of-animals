@@ -1,0 +1,59 @@
+# This workflow will build a Java project with Gradle
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
+
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [ ivanovvo-Integration-1 ]
+  pull_request:
+    branches: [ ivanovvo-Integration-1 ]
+
+jobs:
+        
+  unit_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      
+  integration_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+          
+      - name: Grant execute permission for scripts and gradle
+        run: chmod +x gradlew && chmod +x docker/docker.sh
+        
+      - name: Start docker containers
+        run: docker/docker.sh
+
+      - name: Archive test report
+        uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+          name: ReportUnitTest
+          path: app/build/reports/tests/testDebugUnitTest
+
+      - name: Run integration tests
+        run: ./gradlew testDebug --tests "com.example.kyrs.Integration.*"
+
+      - name: Archive test report
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: ReportIntegrTest
+          path: app/build/reports/tests/testDebugUnitTest
+
+      - name: Stop containers
+        run: docker stack rm app

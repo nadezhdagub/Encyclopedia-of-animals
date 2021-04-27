@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  encycl:
+    # Pull image (by default from Docker Hub)
+    image: vadim8699/encyclopedia:latest
+    # Here you can set environment variables if you want
+    # In ENV_HOST pghost - database host (in our case network alias for postgres, see below)
+    # ENV_HOST ptinder - database name
+    environment:
+      - ENV_PASSWORD=admin
+      - ENV_USER=admin
+      - ENV_HOST=jdbc:postgresql://pghost:5432/admin
+    # Expose port 8080. It means port 8080 on host -> port 8080 on container
+    ports:
+      - 8080:8080
+    deploy:
+      replicas: 1
+    networks:
+      - backend_network
+
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=admin
+    ports:
+      - 5432:5432
+    deploy:
+      replicas: 1
+    # On container network this container with have alias pghost
+    networks:
+      backend_network:
+        aliases:
+          - pghost
+
+# Just network for container communication
+networks:
+  backend_network:
+    driver: overlay

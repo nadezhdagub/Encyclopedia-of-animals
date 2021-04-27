@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".SearchPhotosActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageSwitcher
+            android:id="@+id/imageIs"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+
+        <Button
+            android:id="@+id/buttonIm"
+            android:layout_width="354dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="350sp"
+            android:layout_marginRight="25sp"
+            android:text="Поиск" />
+
+        <Button
+            android:id="@+id/buttonIm2"
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="-110sp"
+            android:layout_marginRight="25sp"
+            android:text="number" />
+
+        <Button
+            android:id="@+id/buttonIm3"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="205sp"
+            android:layout_marginTop="-49sp"
+            android:layout_marginRight="25sp"
+            android:text="security" />
+
+        <Button
+            android:id="@+id/buttonIm4"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="-110sp"
+            android:layout_marginRight="25sp"
+            android:text="area" />
+
+        <Button
+            android:id="@+id/buttonIm5"
+            android:layout_width="173dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="205sp"
+            android:layout_marginTop="-48sp"
+            android:layout_marginRight="25sp"
+            android:text="downsizing" />
+
+        <Button
+            android:id="@+id/buttonIm6"
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="-110sp"
+            android:layout_marginRight="25sp"
+            android:text="Type" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="-200sp"
+            android:layout_marginRight="25sp"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

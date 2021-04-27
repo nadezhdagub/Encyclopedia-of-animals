@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">kyrs</string>
+    <string name="title_activity_registration">registrationActivity</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="title_activity_search_photos">SearchPhotosActivity</string>
+    <string name="title_activity_search_name">SearchNameActivity</string>
+</resources>

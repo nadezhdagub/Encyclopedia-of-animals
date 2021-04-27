@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="match_parent"
+            android:layout_height="246dp"
+            app:srcCompat="@drawable/zamok" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginTop="20sp"
+            android:textAlignment="center"
+            android:background="@color/colorPrimaryDark"
+            android:hint="Авторизация"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@color/colorText1"
+            android:textIsSelectable="false"
+            android:textSize="30sp"
+            android:gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="45sp"
+            android:background="@color/colorPrimary"
+            android:ems="10"
+            android:hint="Login"
+            android:inputType="textPersonName"
+            android:textColorHint="@android:color/background_dark"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="@android:color/black"
+            android:layout_marginRight="45sp"
+            android:layout_marginLeft="45sp"
+            android:layout_marginTop="20sp"
+            android:background="@color/colorPrimary"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/entrance_but"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginLeft="95sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="95sp"
+            android:text="Войти"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/registration_but"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginLeft="95sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="95sp"
+            android:text="Регистрация"
+            android:textSize="24sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
