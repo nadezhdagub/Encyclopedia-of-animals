@@ -5,9 +5,9 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ ivanovvo-Integration-1 ]
+    branches: [ integration ]
   pull_request:
-    branches: [ ivanovvo-Integration-1 ]
+    branches: [ integration  ]
 
 jobs:
         
